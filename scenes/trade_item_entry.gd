@@ -22,6 +22,8 @@ var required_item: String = "wood"
 var required_amount: int
 var money_reward: int
 
+var is_on_cooldown: bool = false
+
 func _ready():
 	timer.timeout.connect(_on_cooldown_finished)
 	generate_random_trade()
@@ -34,6 +36,7 @@ func _process(_delta):
 	
 func update_affordability_visual():
 	if not content.visible: return
+	if is_on_cooldown: return
 	
 	var current_style = trade.get_theme_stylebox("normal").duplicate()
 	if can_afford():
@@ -69,21 +72,26 @@ func _on_trade_pressed() -> void:
 		start_cooldown()
 
 func start_cooldown():
+	is_on_cooldown = true
 	disabled.visible = true
 	countdown.visible = true
 	trade.disabled = true
-	var cooldown_time = randf_range(30.0, 60.0)
+	var cooldown_time = randf_range(20.0, 30.0)
 	timer.start(cooldown_time)
 
 func _on_cooldown_finished():
+	is_on_cooldown = false
 	generate_random_trade()
 	
 	disabled.visible = false
 	countdown.visible = false
 	
 	content.visible = true
+	trade.disabled = false
 	update_affordability_visual()
 	Global.trade_finished.emit()
 
 func can_afford() -> bool:
+	if is_on_cooldown:
+		return false
 	return Global.inventory.get(required_item, 0) >= required_amount

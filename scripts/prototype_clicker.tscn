@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://crw2imrqc5q6t" path="res://assets/UI/item_icon_border.png" id="13_6o5vk"]
 [ext_resource type="Texture2D" uid="uid://culi11guk7v8q" path="res://assets/UI/tile_0019.png" id="13_ceh3d"]
 [ext_resource type="Texture2D" uid="uid://cxxgtmc4prn1l" path="res://assets/Items/money.png" id="13_e3lao"]
+[ext_resource type="Script" uid="uid://crrd6gj7kiwxx" path="res://scripts/level_ui.gd" id="13_lsycg"]
 [ext_resource type="Texture2D" uid="uid://rv0jhhyri05y" path="res://assets/UI/item_border_active.png" id="13_r6rrf"]
 [ext_resource type="Texture2D" uid="uid://35vb45dwdh2e" path="res://assets/Tools/bucket.png" id="15_3l833"]
 [ext_resource type="Script" uid="uid://bk74jbs6fqeym" path="res://scripts/UI/QuickTools/bucket_icon_button.gd" id="16_r6rrf"]
@@ -235,22 +236,24 @@ icon_alignment = 1
 expand_icon = true
 script = ExtResource("4_sq5us")
 
-[node name="Level" type="Control" parent="." unique_id=708044094]
+[node name="LevelUI" type="Control" parent="." unique_id=708044094]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("13_lsycg")
 
-[node name="EXP" type="TextureProgressBar" parent="Level" unique_id=1191277982]
+[node name="EXP" type="TextureProgressBar" parent="LevelUI" unique_id=1191277982]
 layout_mode = 0
 offset_left = 77.0
 offset_top = 26.0
 offset_right = 1587.0
 offset_bottom = 41.0
+step = 0.0
 nine_patch_stretch = true
 texture_progress = SubResource("GradientTexture2D_ceh3d")
 tint_under = Color(0.9603304, 0.00075700047, 0.96087986, 1)
 
-[node name="BarBorder" type="Panel" parent="Level" unique_id=1260125889]
+[node name="BarBorder" type="Panel" parent="LevelUI" unique_id=1260125889]
 layout_mode = 0
 offset_left = 81.0
 offset_top = 21.0
@@ -258,7 +261,7 @@ offset_right = 1590.0
 offset_bottom = 42.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_lsycg")
 
-[node name="IconBg" type="TextureRect" parent="Level" unique_id=340254021]
+[node name="IconBg" type="TextureRect" parent="LevelUI" unique_id=340254021]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 6.0
@@ -266,7 +269,7 @@ offset_right = 120.0
 offset_bottom = 123.0
 texture = ExtResource("13_6o5vk")
 
-[node name="Label" type="Label" parent="Level/IconBg" unique_id=1640772536]
+[node name="LevelLabel" type="Label" parent="LevelUI/IconBg" unique_id=1640772536]
 layout_mode = 0
 offset_left = 21.0
 offset_top = 23.0
@@ -276,7 +279,7 @@ theme_override_fonts/font = ExtResource("26_gef2w")
 theme_override_font_sizes/font_size = 30
 text = "Level"
 
-[node name="Label2" type="Label" parent="Level/IconBg" unique_id=1834509890]
+[node name="LevelValue" type="Label" parent="LevelUI/IconBg" unique_id=1834509890]
 layout_mode = 0
 offset_left = 40.0
 offset_top = 55.0
@@ -290,10 +293,10 @@ vertical_alignment = 1
 
 [node name="ItemContainers" type="HBoxContainer" parent="." unique_id=1682717264]
 layout_mode = 0
-offset_left = 120.0
-offset_top = 58.999996
-offset_right = 1386.9915
-offset_bottom = 187.80756
+offset_left = 130.0
+offset_top = 52.999996
+offset_right = 1396.9915
+offset_bottom = 181.80756
 scale = Vector2(0.76559323, 0.7530614)
 theme_override_constants/separation = 200
 script = ExtResource("7_8w6j3")

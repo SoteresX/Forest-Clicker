@@ -78,6 +78,7 @@ func water_tree() -> void:
 	if Global.inventory["water"] > 0 and Global.current_tool == "Bucket":
 		water_in_tree += 1
 		water_used.emit(1)
+		Global.request_exp.emit(1.0)
 
 	if water_in_tree >= water_per_stage and tree_state == TreeState.PLANTED:
 		tree_state = TreeState.GROWING
@@ -98,8 +99,10 @@ func cut_tree() -> void:
 	if tree_cuts_left > 0:
 		tree_cuts_left -= 1
 		wood_earned.emit(Global.inventory["axe"])
+		Global.request_exp.emit(1.0)
 	else:
 		tree_state = TreeState.READY_TO_RESET
+		Global.request_exp.emit(5.0)
 		
 	tree_updated.emit()
 

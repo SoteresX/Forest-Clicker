@@ -18,9 +18,11 @@ func refresh_visuals() -> void:
 	else:
 		texture_normal = broken_texture
 		
-	var can_trade = Global.can_afford_any_trade()
-	
 	if has_node("Notification"):
+		# The notification only shows if:
+		# 1. The board is fixed
+		# 2. Global says there's at least one available trade we can afford
+		var can_trade = Global.can_afford_any_trade()
 		$Notification.visible = is_fixed and can_trade
 		
 func _on_pressed() -> void:
