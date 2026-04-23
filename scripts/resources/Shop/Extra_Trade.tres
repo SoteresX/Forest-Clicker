@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bkc6ackrr3elg"]
+
+[ext_resource type="Texture2D" uid="uid://bw3uspbfj0efh" path="res://assets/Items/extra_task.png" id="1_cdyb1"]
+[ext_resource type="Script" uid="uid://d16ej1hhh3a8r" path="res://scripts/Items/ItemData.gd" id="1_nf0jo"]
+[ext_resource type="Texture2D" uid="uid://cxxgtmc4prn1l" path="res://assets/Items/money.png" id="2_1gpk6"]
+
+[resource]
+script = ExtResource("1_nf0jo")
+icon = ExtResource("1_cdyb1")
+name = "Extra Trade"
+description = "An extra slot for more trades!"
+cost_type = "money"
+price = 120
+requirement_icon = ExtResource("2_1gpk6")
+reward_type = "task"
+metadata/_custom_type_script = "uid://d16ej1hhh3a8r"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://3ok45cib1p4v"]
+
+[ext_resource type="Texture2D" uid="uid://d2xkuhmgcl00u" path="res://assets/Items/fertilizer.png" id="1_v4ljw"]
+[ext_resource type="Script" uid="uid://d16ej1hhh3a8r" path="res://scripts/ItemData.gd" id="1_yk4fu"]
+[ext_resource type="Texture2D" uid="uid://cxxgtmc4prn1l" path="res://assets/Items/money.png" id="2_okkek"]
+
+[resource]
+script = ExtResource("1_yk4fu")
+icon = ExtResource("1_v4ljw")
+name = "Fertilizer"
+description = "Make your tree more durable!"
+cost_type = "money"
+price = 60
+requirement_icon = ExtResource("2_okkek")
+reward_type = "fertilizer"
+metadata/_custom_type_script = "uid://d16ej1hhh3a8r"

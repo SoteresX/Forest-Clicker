@@ -1,0 +1,152 @@
+[gd_scene format=3 uid="uid://cw1eajkvp2std"]
+
+[ext_resource type="Texture2D" uid="uid://dpgvqsrs6yq37" path="res://assets/UI/Avatar UI/avatar_frame.png" id="1_8w372"]
+[ext_resource type="Texture2D" uid="uid://ba12k8pnw1bcr" path="res://assets/UI/Avatar UI/avatar_border.png" id="2_mhg8b"]
+[ext_resource type="Script" uid="uid://citdkskj6gw85" path="res://scenes/trade_item_entry.gd" id="2_ofrl5"]
+[ext_resource type="Texture2D" uid="uid://bayo52xpj412k" path="res://assets/UI/Avatar UI/avatar_1.png" id="3_ofrl5"]
+[ext_resource type="Texture2D" uid="uid://bb8u4g0sn1tm6" path="res://assets/UI/Avatar UI/avatar_2.png" id="4_5r3ki"]
+[ext_resource type="Texture2D" uid="uid://htewu5edxrfn" path="res://assets/UI/Avatar UI/avatar_name.png" id="4_fr53a"]
+[ext_resource type="FontFile" uid="uid://d2t5pnlu8g8gw" path="res://assets/fonts/PixelifySans.ttf" id="5_5r3ki"]
+[ext_resource type="Texture2D" uid="uid://bvgwojgqr1qn1" path="res://assets/UI/Avatar UI/avatar_3.png" id="5_jpmgn"]
+[ext_resource type="Texture2D" uid="uid://dksy7yola82ah" path="res://assets/Items/log.png" id="6_jpmgn"]
+[ext_resource type="Texture2D" uid="uid://cxxgtmc4prn1l" path="res://assets/Items/money.png" id="7_eta77"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wogtf"]
+texture = ExtResource("1_8w372")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fymlg"]
+texture = ExtResource("2_mhg8b")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ggq0n"]
+font = ExtResource("5_5r3ki")
+font_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fr53a"]
+bg_color = Color(0.13046321, 0.030208923, 0, 0.5764706)
+
+[node name="ItemEntry" type="PanelContainer" unique_id=1164297938]
+custom_minimum_size = Vector2(250, 0)
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_wogtf")
+script = ExtResource("2_ofrl5")
+avatars = Array[Texture2D]([ExtResource("3_ofrl5"), ExtResource("4_5r3ki"), ExtResource("5_jpmgn")])
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=162972149]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Content" type="VBoxContainer" parent="MarginContainer" unique_id=1945629955]
+layout_mode = 2
+alignment = 1
+
+[node name="AvatarWrapper" type="Control" parent="MarginContainer/Content" unique_id=952579306]
+custom_minimum_size = Vector2(160, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="AvatarBorder" type="PanelContainer" parent="MarginContainer/Content/AvatarWrapper" unique_id=1993260971]
+custom_minimum_size = Vector2(160, 150)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 160.0
+offset_bottom = 154.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_fymlg")
+
+[node name="Avatar" type="TextureRect" parent="MarginContainer/Content/AvatarWrapper/AvatarBorder" unique_id=1413697219]
+layout_mode = 2
+texture = ExtResource("3_ofrl5")
+
+[node name="AvatarName" type="TextureRect" parent="MarginContainer/Content/AvatarWrapper" unique_id=2115609912]
+layout_mode = 0
+offset_left = 2.6315727
+offset_top = 111.250015
+offset_right = 159.29784
+offset_bottom = 206.25002
+texture = ExtResource("4_fr53a")
+
+[node name="LabelCenter" type="VBoxContainer" parent="MarginContainer/Content/AvatarWrapper/AvatarName" unique_id=128585455]
+layout_mode = 0
+offset_left = 18.421013
+offset_top = 25.000004
+offset_right = 139.47336
+offset_bottom = 65.0
+alignment = 1
+
+[node name="Name" type="Label" parent="MarginContainer/Content/AvatarWrapper/AvatarName/LabelCenter" unique_id=1890232258]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("5_5r3ki")
+theme_override_font_sizes/font_size = 25
+text = "John"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_trim_flags = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Content" unique_id=1992033004]
+layout_mode = 2
+
+[node name="Requirement" type="HBoxContainer" parent="MarginContainer/Content/VBoxContainer" unique_id=278185113]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Content/VBoxContainer/Requirement" unique_id=541782512]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("5_5r3ki")
+theme_override_font_sizes/font_size = 30
+text = "Need:"
+
+[node name="ItemNeeded" type="TextureRect" parent="MarginContainer/Content/VBoxContainer/Requirement" unique_id=2021439731]
+layout_mode = 2
+texture = ExtResource("6_jpmgn")
+expand_mode = 2
+
+[node name="Amount" type="Label" parent="MarginContainer/Content/VBoxContainer/Requirement" unique_id=1631988116]
+layout_mode = 2
+text = "30"
+label_settings = SubResource("LabelSettings_ggq0n")
+
+[node name="Reward" type="HBoxContainer" parent="MarginContainer/Content/VBoxContainer" unique_id=335722604]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Content/VBoxContainer/Reward" unique_id=192528909]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("5_5r3ki")
+theme_override_font_sizes/font_size = 30
+text = "Give:"
+
+[node name="RewardIcon" type="TextureRect" parent="MarginContainer/Content/VBoxContainer/Reward" unique_id=1445838333]
+layout_mode = 2
+texture = ExtResource("7_eta77")
+expand_mode = 2
+
+[node name="Amount" type="Label" parent="MarginContainer/Content/VBoxContainer/Reward" unique_id=876066819]
+layout_mode = 2
+text = "6"
+label_settings = SubResource("LabelSettings_ggq0n")
+
+[node name="Trade" type="Button" parent="MarginContainer/Content/VBoxContainer" unique_id=1384726317]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_5r3ki")
+theme_override_font_sizes/font_size = 25
+text = "Trade"
+
+[node name="Disabled" type="Panel" parent="." unique_id=1189590950]
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fr53a")
+
+[node name="Countdown" type="Label" parent="." unique_id=565524161]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_5r3ki")
+theme_override_font_sizes/font_size = 30
+text = "0:00"
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=822880289]
+
+[connection signal="pressed" from="MarginContainer/Content/VBoxContainer/Trade" to="." method="_on_trade_pressed"]

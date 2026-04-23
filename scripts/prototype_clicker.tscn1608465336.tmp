@@ -1,0 +1,599 @@
+[gd_scene format=3 uid="uid://cixl0dlde1kwx"]
+
+[ext_resource type="Script" uid="uid://c0prj84lb0b4o" path="res://control.gd" id="1_em6r6"]
+[ext_resource type="Texture2D" uid="uid://c4u507d532suc" path="res://assets/background.jpg" id="2_ip7r7"]
+[ext_resource type="Texture2D" uid="uid://b4eocloedynas" path="res://assets/Well/well_02.png" id="2_sq5us"]
+[ext_resource type="Texture2D" uid="uid://bu1kb4y7ixinh" path="res://assets/Trees/tree_seed.png" id="2_tacqj"]
+[ext_resource type="Texture2D" uid="uid://rult0ykekate" path="res://assets/Well/well_03.png" id="3_sq5us"]
+[ext_resource type="Script" uid="uid://bax0jhluuj5xs" path="res://scripts/tree.gd" id="3_tacqj"]
+[ext_resource type="Script" uid="uid://b6mw07ourivjr" path="res://scripts/well.gd" id="4_sq5us"]
+[ext_resource type="Texture2D" uid="uid://de4brvj1nok53" path="res://assets/Items/water_drop.png" id="5_cfpps"]
+[ext_resource type="Texture2D" uid="uid://dksy7yola82ah" path="res://assets/Items/log.png" id="7_yffqd"]
+[ext_resource type="Script" uid="uid://daqpp5pwsogd1" path="res://scripts/quick_tools_container.gd" id="8_lw4aj"]
+[ext_resource type="Texture2D" uid="uid://c38n7jil3y1id" path="res://assets/Tools/axe.png" id="9_vs2vb"]
+[ext_resource type="Texture2D" uid="uid://bu0tj3c4xoy5d" path="res://assets/UI/item_border.png" id="12_3l833"]
+[ext_resource type="Texture2D" uid="uid://cxxgtmc4prn1l" path="res://assets/Items/money.png" id="13_e3lao"]
+[ext_resource type="Texture2D" uid="uid://rv0jhhyri05y" path="res://assets/UI/item_border_active.png" id="13_r6rrf"]
+[ext_resource type="Texture2D" uid="uid://35vb45dwdh2e" path="res://assets/Tools/bucket.png" id="15_3l833"]
+[ext_resource type="Script" uid="uid://bk74jbs6fqeym" path="res://scripts/bucket_button.gd" id="16_r6rrf"]
+[ext_resource type="Texture2D" uid="uid://csqk7rt0grg5r" path="res://assets/UI/tile_0001.png" id="18_nspq2"]
+[ext_resource type="Texture2D" uid="uid://bdapd53n56bch" path="res://assets/UI/tile_0002.png" id="19_7tdfq"]
+[ext_resource type="Texture2D" uid="uid://reocvso4bcgu" path="res://assets/UI/tile_0000.png" id="19_jakos"]
+[ext_resource type="Script" uid="uid://dcnd6p5lxg7c4" path="res://scripts/menu_buttons.gd" id="19_l5qky"]
+[ext_resource type="Texture2D" uid="uid://jkr3bnpdounb" path="res://assets/Tools/craft.png" id="20_7tdfq"]
+[ext_resource type="Texture2D" uid="uid://bfcvq80potcqw" path="res://assets/Tools/inventory.png" id="22_7tdfq"]
+[ext_resource type="Texture2D" uid="uid://c2jwsuf4tbwq6" path="res://assets/Tools/map.png" id="23_phcio"]
+[ext_resource type="Texture2D" uid="uid://cxnlrivn684pc" path="res://assets/Tools/settings.png" id="24_2x0un"]
+[ext_resource type="Texture2D" uid="uid://ca2us7v8lq60r" path="res://assets/UI/menu_panel.png" id="25_me6rw"]
+[ext_resource type="FontFile" uid="uid://d2t5pnlu8g8gw" path="res://assets/fonts/PixelifySans.ttf" id="26_gef2w"]
+[ext_resource type="Texture2D" uid="uid://4nmy15aedtvv" path="res://assets/UI/item_value_border.png" id="27_e3lao"]
+[ext_resource type="Texture2D" uid="uid://crw2imrqc5q6t" path="res://assets/UI/item_icon_border.png" id="28_sld4q"]
+[ext_resource type="Script" uid="uid://ct4tbj4pmrbao" path="res://scripts/item_list.gd" id="29_sld4q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x6m4e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tacqj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cfpps"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yffqd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vs2vb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vdx46"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sq5us"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r6rrf"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource("3_sq5us")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3l833"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r6rrf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gef2w"]
+texture = ExtResource("27_e3lao")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lw4aj"]
+texture = ExtResource("12_3l833")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v10t0"]
+texture = ExtResource("13_r6rrf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vdx46"]
+texture = ExtResource("13_r6rrf")
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_l5qky"]
+allow_unpress = true
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_phcio"]
+texture = ExtResource("18_nspq2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2x0un"]
+texture = ExtResource("19_7tdfq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_me6rw"]
+texture = ExtResource("19_jakos")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gef2w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l5qky"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l5qky"]
+bg_color = Color(0.52595794, 0.35588747, 0.174586, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e3lao"]
+font = ExtResource("26_gef2w")
+font_size = 80
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gef2w"]
+bg_color = Color(0.629785, 0.1913988, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sld4q"]
+bg_color = Color(0.3862448, 0.07155014, 7.219613e-08, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e3lao"]
+bg_color = Color(0.97248036, 0.1961357, 3.85046e-07, 1)
+
+[node name="PrototypeClicker" type="Control" unique_id=50916143 node_paths=PackedStringArray("woodLabel", "waterLabel", "inv_woodLabel", "inv_waterLabel", "moneyLabel", "inv_moneyLabel")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_em6r6")
+woodLabel = NodePath("ItemContainers/ItemSlot2/ValuePanel/woodLabel")
+waterLabel = NodePath("ItemContainers/ItemSlot/ValuePanel/waterLabel")
+inv_woodLabel = NodePath("MenuContainer/Inventory/Items/Wood/VBoxContainer/InvWoodLabel")
+inv_waterLabel = NodePath("MenuContainer/Inventory/Items/Water/VBoxContainer/InvWaterLabel")
+moneyLabel = NodePath("ItemContainers/ItemSlot3/ValuePanel/moneyLabel")
+inv_moneyLabel = NodePath("MenuContainer/Inventory/Items/Money/VBoxContainer/InvMoneyLabel")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1083610456]
+z_index = -1
+y_sort_enabled = true
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 1602.0
+offset_bottom = 903.0
+texture = ExtResource("2_ip7r7")
+
+[node name="Tree" type="Button" parent="." unique_id=240041382]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 0
+offset_left = 572.0
+offset_top = 488.0
+offset_right = 764.0
+offset_bottom = 680.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x6m4e")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tacqj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_cfpps")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_yffqd")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vs2vb")
+icon = ExtResource("2_tacqj")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_tacqj")
+
+[node name="Well" type="Button" parent="." unique_id=600803630]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 501.0
+offset_right = 280.0
+offset_bottom = 719.2186
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vdx46")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_sq5us")
+theme_override_styles/hover = SubResource("StyleBoxTexture_r6rrf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3l833")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r6rrf")
+icon = ExtResource("2_sq5us")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("4_sq5us")
+
+[node name="ItemContainers" type="HBoxContainer" parent="." unique_id=1666636587]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 21.0
+offset_right = 1542.0
+offset_bottom = 161.0
+scale = Vector2(0.76559323, 0.7530614)
+theme_override_constants/separation = 250
+
+[node name="ItemSlot" type="Control" parent="ItemContainers" unique_id=1591542338]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="ValuePanel" type="Panel" parent="ItemContainers/ItemSlot" unique_id=550682925]
+layout_mode = 0
+offset_left = 26.0
+offset_top = -3.0
+offset_right = 239.0
+offset_bottom = 142.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_gef2w")
+
+[node name="waterLabel" type="Label" parent="ItemContainers/ItemSlot/ValuePanel" unique_id=1241175143]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.625
+anchor_top = 0.51600003
+anchor_right = 0.625
+anchor_bottom = 0.51600003
+offset_left = -38.125
+offset_top = -46.820007
+offset_right = 74.5
+offset_bottom = 47.75598
+theme_type_variation = &"HeaderMedium"
+theme_override_fonts/font = ExtResource("26_gef2w")
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IconBg" type="TextureRect" parent="ItemContainers/ItemSlot" unique_id=1010545510]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -3.0
+offset_right = 139.0
+offset_bottom = 141.0
+texture = ExtResource("28_sld4q")
+
+[node name="Icon" type="TextureRect" parent="ItemContainers/ItemSlot" unique_id=1102393539]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 30.0
+offset_right = 111.0
+offset_bottom = 109.0
+texture = ExtResource("5_cfpps")
+expand_mode = 2
+
+[node name="ItemSlot2" type="Control" parent="ItemContainers" unique_id=1033444071]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="ValuePanel" type="Panel" parent="ItemContainers/ItemSlot2" unique_id=1120633959]
+layout_mode = 0
+offset_left = 26.0
+offset_top = -3.0
+offset_right = 239.0
+offset_bottom = 142.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_gef2w")
+
+[node name="woodLabel" type="Label" parent="ItemContainers/ItemSlot2/ValuePanel" unique_id=465671169]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.625
+anchor_top = 0.51600003
+anchor_right = 0.625
+anchor_bottom = 0.51600003
+offset_left = -38.125
+offset_top = -46.820007
+offset_right = 74.5
+offset_bottom = 47.75598
+theme_type_variation = &"HeaderMedium"
+theme_override_fonts/font = ExtResource("26_gef2w")
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IconBg" type="TextureRect" parent="ItemContainers/ItemSlot2" unique_id=1967806552]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 140.0
+offset_bottom = 140.0
+texture = ExtResource("28_sld4q")
+
+[node name="Icon" type="TextureRect" parent="ItemContainers/ItemSlot2" unique_id=2048660629]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 30.0
+offset_right = 111.0
+offset_bottom = 109.0
+texture = ExtResource("7_yffqd")
+expand_mode = 2
+
+[node name="ItemSlot3" type="Control" parent="ItemContainers" unique_id=990068031]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="ValuePanel" type="Panel" parent="ItemContainers/ItemSlot3" unique_id=282400402]
+layout_mode = 0
+offset_left = 26.0
+offset_top = -3.0
+offset_right = 239.0
+offset_bottom = 142.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_gef2w")
+
+[node name="moneyLabel" type="Label" parent="ItemContainers/ItemSlot3/ValuePanel" unique_id=123862833]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.625
+anchor_top = 0.51600003
+anchor_right = 0.625
+anchor_bottom = 0.51600003
+offset_left = -38.125
+offset_top = -46.820007
+offset_right = 74.5
+offset_bottom = 47.75598
+theme_type_variation = &"HeaderMedium"
+theme_override_fonts/font = ExtResource("26_gef2w")
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IconBg" type="TextureRect" parent="ItemContainers/ItemSlot3" unique_id=1830171593]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 140.0
+offset_bottom = 140.0
+texture = ExtResource("28_sld4q")
+
+[node name="Icon" type="TextureRect" parent="ItemContainers/ItemSlot3" unique_id=251329674]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 30.0
+offset_right = 111.0
+offset_bottom = 109.0
+texture = ExtResource("13_e3lao")
+expand_mode = 2
+
+[node name="QuickToolsContainer" type="HBoxContainer" parent="." unique_id=1671004816]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_left = 23.0
+offset_top = 755.0
+offset_right = 721.0
+offset_bottom = 879.0
+theme_override_constants/separation = 20
+script = ExtResource("8_lw4aj")
+
+[node name="Axe" type="Button" parent="QuickToolsContainer" unique_id=1680216047]
+custom_minimum_size = Vector2(124, 124)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_lw4aj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_v10t0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vdx46")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_l5qky")
+icon = ExtResource("9_vs2vb")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Bucket" type="Button" parent="QuickToolsContainer" unique_id=156894981]
+custom_minimum_size = Vector2(124, 124)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_lw4aj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_v10t0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vdx46")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_l5qky")
+icon = ExtResource("15_3l833")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("16_r6rrf")
+
+[node name="MenuButtons" type="HBoxContainer" parent="." unique_id=388064203]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.004
+anchor_bottom = -0.004
+offset_left = 794.0
+offset_top = 762.6
+offset_right = 1582.0
+offset_bottom = 894.6
+theme_override_constants/separation = 20
+alignment = 2
+script = ExtResource("19_l5qky")
+
+[node name="Craft" type="Button" parent="MenuButtons" unique_id=1607549664]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 1.05
+theme_override_styles/normal = SubResource("StyleBoxTexture_phcio")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2x0un")
+theme_override_styles/hover = SubResource("StyleBoxTexture_me6rw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_gef2w")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l5qky")
+icon = ExtResource("20_7tdfq")
+expand_icon = true
+
+[node name="Inventory" type="Button" parent="MenuButtons" unique_id=150679852]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 1.05
+theme_override_styles/normal = SubResource("StyleBoxTexture_phcio")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2x0un")
+theme_override_styles/hover = SubResource("StyleBoxTexture_me6rw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_gef2w")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l5qky")
+icon = ExtResource("22_7tdfq")
+expand_icon = true
+
+[node name="Map" type="Button" parent="MenuButtons" unique_id=1482243626]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 1.05
+theme_override_styles/normal = SubResource("StyleBoxTexture_phcio")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2x0un")
+theme_override_styles/hover = SubResource("StyleBoxTexture_me6rw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_gef2w")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l5qky")
+icon = ExtResource("23_phcio")
+expand_icon = true
+
+[node name="Settings" type="Button" parent="MenuButtons" unique_id=1059191149]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 1.05
+theme_override_styles/normal = SubResource("StyleBoxTexture_phcio")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2x0un")
+theme_override_styles/hover = SubResource("StyleBoxTexture_me6rw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_gef2w")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l5qky")
+icon = ExtResource("24_2x0un")
+expand_icon = true
+
+[node name="MenuContainer" type="Control" parent="." unique_id=995161618]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_left = 763.0
+offset_top = 25.0
+offset_right = 1848.0007
+offset_bottom = 875.00024
+scale = Vector2(0.7600018, 0.79999983)
+
+[node name="Background" type="TextureRect" parent="MenuContainer" unique_id=1594781488]
+layout_mode = 0
+offset_left = -83.75008
+offset_top = -25.000004
+offset_right = 1111.8687
+offset_bottom = 907.50037
+texture = ExtResource("25_me6rw")
+
+[node name="Panel" type="Panel" parent="MenuContainer" unique_id=147018261]
+layout_mode = 0
+offset_left = -17.500061
+offset_top = 46.250008
+offset_right = 1047.2659
+offset_bottom = 832.50024
+theme_override_styles/panel = SubResource("StyleBoxFlat_l5qky")
+
+[node name="Title" type="Label" parent="MenuContainer" unique_id=744664391]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49300003
+anchor_top = 0.11400001
+anchor_right = 0.49300003
+anchor_bottom = 0.11400001
+offset_left = -205.9588
+offset_top = -48.150024
+offset_right = 206.54156
+offset_bottom = 48.849968
+theme_type_variation = &"HeaderLarge"
+text = "INVENTORY"
+label_settings = SubResource("LabelSettings_e3lao")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Inventory" type="Control" parent="MenuContainer" unique_id=350002144]
+visible = false
+anchors_preset = 0
+offset_left = -32.5
+offset_top = 33.750008
+offset_right = 1060.001
+offset_bottom = 845.00024
+
+[node name="Items" type="GridContainer" parent="MenuContainer/Inventory" unique_id=905589220]
+layout_mode = 0
+offset_left = 29.86847
+offset_top = 108.750015
+offset_right = 1041.7081
+offset_bottom = 788.7501
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 4
+columns = 4
+
+[node name="Water" type="TextureRect" parent="MenuContainer/Inventory/Items" unique_id=1113180156]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.87
+texture = ExtResource("28_sld4q")
+expand_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuContainer/Inventory/Items/Water" unique_id=1779164283]
+layout_mode = 0
+offset_left = 82.50014
+offset_top = 55.000008
+offset_right = 172.50008
+offset_bottom = 216.0
+
+[node name="ItemIcon" type="TextureRect" parent="MenuContainer/Inventory/Items/Water/VBoxContainer" unique_id=1544495897]
+layout_mode = 2
+texture = ExtResource("5_cfpps")
+expand_mode = 4
+
+[node name="InvWaterLabel" type="Label" parent="MenuContainer/Inventory/Items/Water/VBoxContainer" unique_id=255440692]
+layout_mode = 2
+theme_type_variation = &"HeaderLarge"
+theme_override_fonts/font = ExtResource("26_gef2w")
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Wood" type="TextureRect" parent="MenuContainer/Inventory/Items" unique_id=1702510985]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.87
+texture = ExtResource("28_sld4q")
+expand_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuContainer/Inventory/Items/Wood" unique_id=738858040]
+layout_mode = 0
+offset_left = 82.50014
+offset_top = 55.000008
+offset_right = 172.50008
+offset_bottom = 216.0
+
+[node name="ItemIcon" type="TextureRect" parent="MenuContainer/Inventory/Items/Wood/VBoxContainer" unique_id=1291934464]
+layout_mode = 2
+texture = ExtResource("7_yffqd")
+expand_mode = 4
+
+[node name="InvWoodLabel" type="Label" parent="MenuContainer/Inventory/Items/Wood/VBoxContainer" unique_id=645120936]
+layout_mode = 2
+theme_type_variation = &"HeaderLarge"
+theme_override_fonts/font = ExtResource("26_gef2w")
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Money" type="TextureRect" parent="MenuContainer/Inventory/Items" unique_id=86997362]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.87
+texture = ExtResource("28_sld4q")
+expand_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuContainer/Inventory/Items/Money" unique_id=1473820981]
+layout_mode = 0
+offset_left = 82.50014
+offset_top = 55.000008
+offset_right = 172.50008
+offset_bottom = 216.0
+
+[node name="ItemIcon" type="TextureRect" parent="MenuContainer/Inventory/Items/Money/VBoxContainer" unique_id=2083651422]
+layout_mode = 2
+texture = ExtResource("13_e3lao")
+expand_mode = 4
+
+[node name="InvMoneyLabel" type="Label" parent="MenuContainer/Inventory/Items/Money/VBoxContainer" unique_id=733683614]
+layout_mode = 2
+theme_type_variation = &"HeaderLarge"
+theme_override_fonts/font = ExtResource("26_gef2w")
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Craft" type="Control" parent="MenuContainer" unique_id=2105046835]
+anchors_preset = 0
+offset_left = -31.578873
+offset_top = 32.500008
+offset_right = 1060.9221
+offset_bottom = 843.75
+
+[node name="ItemList" type="VBoxContainer" parent="MenuContainer/Craft" unique_id=1954882522]
+layout_mode = 0
+offset_left = 28.9473
+offset_top = 118.75002
+offset_right = 1061.8396
+offset_bottom = 785.0002
+script = ExtResource("29_sld4q")
+
+[node name="CloseButton" type="Button" parent="MenuContainer" unique_id=1391972085]
+layout_mode = 0
+offset_left = 970.00085
+offset_top = 62.500015
+offset_right = 1026.251
+offset_bottom = 118.75003
+theme_override_colors/font_color = Color(1.216, 1.216, 1.216, 1)
+theme_override_fonts/font = ExtResource("26_gef2w")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_gef2w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sld4q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e3lao")
+text = "X"
+
+[connection signal="pressed" from="Tree" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Well" to="Well" method="_on_pressed"]
+[connection signal="pressed" from="MenuContainer/CloseButton" to="MenuContainer/CloseButton" method="_on_pressed"]

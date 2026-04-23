@@ -1,0 +1,592 @@
+[gd_scene format=3 uid="uid://cixl0dlde1kwx"]
+
+[ext_resource type="Script" uid="uid://c0prj84lb0b4o" path="res://control.gd" id="1_em6r6"]
+[ext_resource type="Texture2D" uid="uid://deps2ltc8vjce" path="res://assets/background.jpeg" id="2_fjxlr"]
+[ext_resource type="Texture2D" uid="uid://b4eocloedynas" path="res://assets/Well/well_02.png" id="2_sq5us"]
+[ext_resource type="Texture2D" uid="uid://bq7o7aafbofeh" path="res://assets/broken_trade_panel.png" id="3_o1jqb"]
+[ext_resource type="Texture2D" uid="uid://rult0ykekate" path="res://assets/Well/well_03.png" id="3_sq5us"]
+[ext_resource type="Script" uid="uid://cqgghg2bt1tft" path="res://scripts/Plots Trees Well/plot_manager.gd" id="3_twb7u"]
+[ext_resource type="Texture2D" uid="uid://colstyv7oefpw" path="res://assets/broken_trade_panel_highlightl.png" id="4_3pmvh"]
+[ext_resource type="Script" uid="uid://b6mw07ourivjr" path="res://scripts/Plots Trees Well/well.gd" id="4_sq5us"]
+[ext_resource type="Script" uid="uid://b6wgbb1q16e2e" path="res://scripts/task_board.gd" id="6_qb4av"]
+[ext_resource type="PackedScene" uid="uid://dnpddowmkhxb4" path="res://scenes/UI_Item_slot.tscn" id="7_1wxx2"]
+[ext_resource type="Script" uid="uid://bvm57dx38wxn" path="res://scripts/UI/ui_item_containers.gd" id="7_8w6j3"]
+[ext_resource type="Texture2D" uid="uid://dksy7yola82ah" path="res://assets/Items/log.png" id="7_yffqd"]
+[ext_resource type="Texture2D" uid="uid://de4brvj1nok53" path="res://assets/Items/water_drop.png" id="8_fjxlr"]
+[ext_resource type="Script" uid="uid://daqpp5pwsogd1" path="res://scripts/UI/QuickTools/quick_tools_container.gd" id="8_lw4aj"]
+[ext_resource type="Texture2D" uid="uid://bu0tj3c4xoy5d" path="res://assets/UI/item_border.png" id="12_3l833"]
+[ext_resource type="Texture2D" uid="uid://c8dwmdihcq0e8" path="res://assets/Items/seed.png" id="12_twb7u"]
+[ext_resource type="Texture2D" uid="uid://cxxgtmc4prn1l" path="res://assets/Items/money.png" id="13_e3lao"]
+[ext_resource type="Texture2D" uid="uid://rv0jhhyri05y" path="res://assets/UI/item_border_active.png" id="13_r6rrf"]
+[ext_resource type="Texture2D" uid="uid://35vb45dwdh2e" path="res://assets/Tools/bucket.png" id="15_3l833"]
+[ext_resource type="Script" uid="uid://bk74jbs6fqeym" path="res://scripts/UI/QuickTools/bucket_icon_button.gd" id="16_r6rrf"]
+[ext_resource type="Texture2D" uid="uid://buxvpvmexdsm" path="res://assets/Tools/wood_axe.png" id="17_xkj5a"]
+[ext_resource type="Texture2D" uid="uid://csqk7rt0grg5r" path="res://assets/UI/tile_0001.png" id="18_nspq2"]
+[ext_resource type="Texture2D" uid="uid://bdapd53n56bch" path="res://assets/UI/tile_0002.png" id="19_7tdfq"]
+[ext_resource type="Texture2D" uid="uid://reocvso4bcgu" path="res://assets/UI/tile_0000.png" id="19_jakos"]
+[ext_resource type="Script" uid="uid://dcnd6p5lxg7c4" path="res://scripts/Menu/Buttons/menu_buttons.gd" id="19_l5qky"]
+[ext_resource type="Texture2D" uid="uid://de74cjg0yfvbo" path="res://assets/Tools/shovel.png" id="20_xkj5a"]
+[ext_resource type="Texture2D" uid="uid://bfcvq80potcqw" path="res://assets/UI/Buttons/inventory.png" id="24_8w6j3"]
+[ext_resource type="Texture2D" uid="uid://jkr3bnpdounb" path="res://assets/UI/Buttons/craft.png" id="25_ihao3"]
+[ext_resource type="Texture2D" uid="uid://ca2us7v8lq60r" path="res://assets/UI/menu_panel.png" id="25_me6rw"]
+[ext_resource type="Texture2D" uid="uid://bas740cs3x52p" path="res://assets/UI/Buttons/shop.png" id="26_1wxx2"]
+[ext_resource type="FontFile" uid="uid://d2t5pnlu8g8gw" path="res://assets/fonts/PixelifySans.ttf" id="26_gef2w"]
+[ext_resource type="Texture2D" uid="uid://c2jwsuf4tbwq6" path="res://assets/UI/Buttons/map.png" id="28_yk1hd"]
+[ext_resource type="Texture2D" uid="uid://cxnlrivn684pc" path="res://assets/UI/Buttons/settings.png" id="29_duvi7"]
+[ext_resource type="Script" uid="uid://ct4tbj4pmrbao" path="res://scripts/Items/Craft_Buy_Items/item_list.gd" id="29_sld4q"]
+[ext_resource type="Texture2D" uid="uid://cauo01u2yn24e" path="res://assets/UI/Buttons/notification.png" id="30_qb4av"]
+[ext_resource type="Texture2D" uid="uid://bi8mbnnsu8o7r" path="res://assets/UI/item_label.png" id="31_8w6j3"]
+[ext_resource type="Script" uid="uid://oapl7o6vfxac" path="res://scripts/Menu/Inventory/inventoryManager.gd" id="31_fjxlr"]
+[ext_resource type="Script" uid="uid://6mqio8xcvruo" path="res://scripts/Menu/Trade/trade_list.gd" id="31_fymlg"]
+[ext_resource type="PackedScene" uid="uid://cw1eajkvp2std" path="res://scenes/Trade_ItemEntry.tscn" id="31_suwn6"]
+[ext_resource type="PackedScene" uid="uid://dq8ttwf51n1bb" path="res://scenes/Inventory_slot.tscn" id="31_xkj5a"]
+[ext_resource type="Resource" uid="uid://drbcx0q7ixvt7" path="res://scripts/resources/Axe.tres" id="32_wogtf"]
+[ext_resource type="Resource" uid="uid://deiqxrqefoi8r" path="res://scripts/resources/Bucket.tres" id="33_6e131"]
+[ext_resource type="Script" uid="uid://d16ej1hhh3a8r" path="res://scripts/Items/ItemData.gd" id="33_ggq0n"]
+[ext_resource type="Resource" uid="uid://c2u4n138kfe5n" path="res://scripts/resources/Enriched_Soil.tres" id="34_6e131"]
+[ext_resource type="Texture2D" uid="uid://5uw4gtg8kk0w" path="res://assets/Items/enriched_soil.png" id="35_duvi7"]
+[ext_resource type="Texture2D" uid="uid://d2xkuhmgcl00u" path="res://assets/Items/fertilizer.png" id="36_74afb"]
+[ext_resource type="Texture2D" uid="uid://b4wxkd1obyul1" path="res://assets/UI/close_button.png" id="38_h23nt"]
+[ext_resource type="Texture2D" uid="uid://cyaoat4lpu2ah" path="res://assets/UI/close_button_highlight.png" id="39_3muty"]
+[ext_resource type="Texture2D" uid="uid://dr6rx07gmt81h" path="res://assets/UI/close_button_pressed.png" id="39_ropus"]
+[ext_resource type="Resource" uid="uid://bn4vmlanh6m4v" path="res://scripts/resources/Seed.tres" id="40_ihao3"]
+[ext_resource type="Resource" uid="uid://3ok45cib1p4v" path="res://scripts/resources/Fertilizer.tres" id="41_1wxx2"]
+[ext_resource type="Resource" uid="uid://fraisoacs363" path="res://scripts/resources/Plot.tres" id="41_twb7u"]
+[ext_resource type="Resource" uid="uid://u34stud4smcc" path="res://scripts/resources/Task_Board.tres" id="43_3pmvh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vdx46"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sq5us"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r6rrf"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource("3_sq5us")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3l833"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r6rrf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_twb7u"]
+font = ExtResource("26_gef2w")
+font_size = 50
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lw4aj"]
+texture = ExtResource("12_3l833")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v10t0"]
+texture = ExtResource("13_r6rrf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vdx46"]
+texture = ExtResource("13_r6rrf")
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_l5qky"]
+allow_unpress = true
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_phcio"]
+texture = ExtResource("18_nspq2")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2x0un"]
+texture = ExtResource("19_7tdfq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_me6rw"]
+texture = ExtResource("19_jakos")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gef2w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l5qky"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l5qky"]
+bg_color = Color(0.52595794, 0.35588747, 0.174586, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e3lao"]
+font = ExtResource("26_gef2w")
+font_size = 80
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_8w6j3"]
+content_margin_bottom = 10.0
+color = Color(0.3924032, 0.2602064, 0.11868582, 1)
+grow_begin = -13.0
+thickness = 5
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3muty"]
+texture = ExtResource("38_h23nt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xlkwm"]
+texture = ExtResource("39_ropus")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ropus"]
+texture = ExtResource("39_3muty")
+
+[node name="PrototypeClicker" type="Control" unique_id=50916143]
+z_index = -1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_em6r6")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1083610456]
+z_index = -1
+y_sort_enabled = true
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 1602.0
+offset_bottom = 903.0
+texture = ExtResource("2_fjxlr")
+
+[node name="PlotManager" type="Control" parent="." unique_id=1366201728]
+anchors_preset = 0
+offset_right = 1402.0
+offset_bottom = 899.0
+script = ExtResource("3_twb7u")
+
+[node name="Pos1" type="ReferenceRect" parent="PlotManager" unique_id=2040106284]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 596.0
+offset_right = 498.0
+offset_bottom = 596.0
+
+[node name="Pos2" type="ReferenceRect" parent="PlotManager" unique_id=1051670893]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 579.0
+offset_right = 880.0
+offset_bottom = 579.0
+
+[node name="Pos3" type="ReferenceRect" parent="PlotManager" unique_id=2109402786]
+layout_mode = 0
+offset_left = 1178.0
+offset_top = 626.0
+offset_right = 1178.0
+offset_bottom = 626.0
+
+[node name="TaskBoard" type="TextureButton" parent="." unique_id=1760929326]
+z_index = 1
+layout_mode = 0
+offset_left = 317.0
+offset_top = 330.0
+offset_right = 530.0
+offset_bottom = 571.86816
+texture_normal = ExtResource("3_o1jqb")
+texture_hover = ExtResource("4_3pmvh")
+stretch_mode = 0
+script = ExtResource("6_qb4av")
+
+[node name="Well" type="Button" parent="." unique_id=600803630]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 501.0
+offset_right = 280.0
+offset_bottom = 719.2186
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vdx46")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_sq5us")
+theme_override_styles/hover = SubResource("StyleBoxTexture_r6rrf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3l833")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r6rrf")
+icon = ExtResource("2_sq5us")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("4_sq5us")
+
+[node name="ItemContainers" type="VBoxContainer" parent="." unique_id=962682671]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 262.78595
+offset_bottom = 562.4118
+scale = Vector2(0.76559323, 0.7530614)
+theme_override_constants/separation = 150
+script = ExtResource("7_8w6j3")
+slot_scene = ExtResource("7_1wxx2")
+icon_map = Dictionary[String, Texture2D]({
+"money": ExtResource("13_e3lao"),
+"seed": ExtResource("12_twb7u"),
+"water": ExtResource("8_fjxlr"),
+"wood": ExtResource("7_yffqd")
+})
+
+[node name="ItemSlot" parent="ItemContainers" unique_id=64177304 instance=ExtResource("7_1wxx2")]
+layout_mode = 2
+icon_texture = ExtResource("8_fjxlr")
+
+[node name="ToolLabel" type="Label" parent="." unique_id=271153214]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 703.0
+offset_right = 335.0
+offset_bottom = 768.0
+text = "Axe"
+label_settings = SubResource("LabelSettings_twb7u")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuickToolsContainer" type="HBoxContainer" parent="." unique_id=1671004816]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_left = 23.0
+offset_top = 769.0
+offset_right = 721.0
+offset_bottom = 893.0
+theme_override_constants/separation = 20
+script = ExtResource("8_lw4aj")
+
+[node name="Axe" type="Button" parent="QuickToolsContainer" unique_id=1680216047]
+custom_minimum_size = Vector2(124, 124)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_lw4aj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_v10t0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vdx46")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_l5qky")
+icon = ExtResource("17_xkj5a")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Bucket" type="Button" parent="QuickToolsContainer" unique_id=156894981]
+custom_minimum_size = Vector2(124, 124)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_lw4aj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_v10t0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vdx46")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_l5qky")
+icon = ExtResource("15_3l833")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("16_r6rrf")
+
+[node name="Shovel" type="Button" parent="QuickToolsContainer" unique_id=531958962]
+custom_minimum_size = Vector2(124, 124)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_lw4aj")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_v10t0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vdx46")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_l5qky")
+icon = ExtResource("20_xkj5a")
+icon_alignment = 1
+expand_icon = true
+
+[node name="MenuTooltip" type="Label" parent="." unique_id=323994419]
+visible = false
+z_index = 3
+layout_mode = 0
+offset_left = 1124.0
+offset_top = 700.0
+offset_right = 1373.0
+offset_bottom = 760.0
+pivot_offset = Vector2(124, 58)
+text = "Inventory"
+label_settings = SubResource("LabelSettings_twb7u")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButtons" type="HBoxContainer" parent="." unique_id=1580601156]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.004
+anchor_bottom = -0.004
+offset_left = 904.0
+offset_top = 761.6
+offset_right = 1584.0
+offset_bottom = 895.6
+theme_override_constants/separation = 20
+alignment = 2
+script = ExtResource("19_l5qky")
+
+[node name="Inventory" type="Button" parent="MenuButtons" unique_id=150679852]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 1.05
+theme_override_styles/normal = SubResource("StyleBoxTexture_phcio")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2x0un")
+theme_override_styles/hover = SubResource("StyleBoxTexture_me6rw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_gef2w")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l5qky")
+icon = ExtResource("24_8w6j3")
+expand_icon = true
+
+[node name="Craft" type="Button" parent="MenuButtons" unique_id=1607549664]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 1.05
+theme_override_styles/normal = SubResource("StyleBoxTexture_phcio")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2x0un")
+theme_override_styles/hover = SubResource("StyleBoxTexture_me6rw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_gef2w")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l5qky")
+icon = ExtResource("25_ihao3")
+expand_icon = true
+
+[node name="Notification" type="TextureRect" parent="MenuButtons/Craft" unique_id=778182540]
+z_index = 1
+layout_mode = 0
+offset_left = 89.0
+offset_top = -19.0
+offset_right = 140.0
+offset_bottom = 32.0
+texture = ExtResource("30_qb4av")
+expand_mode = 3
+
+[node name="Shop" type="Button" parent="MenuButtons" unique_id=958234293]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 1.05
+theme_override_styles/normal = SubResource("StyleBoxTexture_phcio")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2x0un")
+theme_override_styles/hover = SubResource("StyleBoxTexture_me6rw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_gef2w")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l5qky")
+icon = ExtResource("26_1wxx2")
+expand_icon = true
+
+[node name="Notification" type="TextureRect" parent="MenuButtons/Shop" unique_id=1013189059]
+z_index = 1
+layout_mode = 0
+offset_left = 89.0
+offset_top = -19.0
+offset_right = 140.0
+offset_bottom = 32.0
+texture = ExtResource("30_qb4av")
+expand_mode = 3
+
+[node name="Map" type="Button" parent="MenuButtons" unique_id=1482243626]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 1.05
+theme_override_styles/normal = SubResource("StyleBoxTexture_phcio")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2x0un")
+theme_override_styles/hover = SubResource("StyleBoxTexture_me6rw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_gef2w")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l5qky")
+icon = ExtResource("28_yk1hd")
+expand_icon = true
+
+[node name="Settings" type="Button" parent="MenuButtons" unique_id=1059191149]
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 1.05
+theme_override_styles/normal = SubResource("StyleBoxTexture_phcio")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2x0un")
+theme_override_styles/hover = SubResource("StyleBoxTexture_me6rw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_gef2w")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l5qky")
+icon = ExtResource("29_duvi7")
+expand_icon = true
+
+[node name="MenuContainer" type="Control" parent="." unique_id=995161618]
+unique_name_in_owner = true
+visible = false
+z_index = 2
+anchors_preset = 0
+offset_left = 768.0
+offset_top = 38.0
+offset_right = 1832.4711
+offset_bottom = 885.5002
+scale = Vector2(0.7600018, 0.79999983)
+
+[node name="Background" type="TextureRect" parent="MenuContainer" unique_id=1594781488]
+layout_mode = 0
+offset_left = -83.75008
+offset_top = -25.000004
+offset_right = 1111.8687
+offset_bottom = 907.50037
+texture = ExtResource("25_me6rw")
+
+[node name="Panel" type="Panel" parent="MenuContainer" unique_id=147018261]
+layout_mode = 0
+offset_left = -17.500061
+offset_top = 46.250008
+offset_right = 1047.2659
+offset_bottom = 832.50024
+theme_override_styles/panel = SubResource("StyleBoxFlat_l5qky")
+
+[node name="TitleBg" type="TextureRect" parent="MenuContainer" unique_id=857591223]
+layout_mode = 0
+offset_left = 163.15753
+offset_top = -60.000015
+offset_right = 900.3927
+offset_bottom = 138.75003
+texture = ExtResource("31_8w6j3")
+
+[node name="Title" type="Label" parent="MenuContainer/TitleBg" unique_id=744664391]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49300003
+anchor_top = 0.11400001
+anchor_right = 0.49300003
+anchor_bottom = 0.11400001
+offset_left = -197.66794
+offset_top = 26.0925
+offset_right = 214.83228
+offset_bottom = 123.09249
+theme_type_variation = &"HeaderLarge"
+text = "INVENTORY"
+label_settings = SubResource("LabelSettings_e3lao")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Inventory" type="Control" parent="MenuContainer" unique_id=350002144]
+anchors_preset = 0
+offset_left = -32.5
+offset_top = 31.250008
+offset_right = 1060.001
+offset_bottom = 845.00024
+script = ExtResource("31_fjxlr")
+inventorySlot_scene = ExtResource("31_xkj5a")
+icon_map = {
+"axe": ExtResource("17_xkj5a"),
+"bucket": ExtResource("15_3l833"),
+"fertilizer": ExtResource("36_74afb"),
+"money": ExtResource("13_e3lao"),
+"seed": ExtResource("12_twb7u"),
+"shovel": ExtResource("20_xkj5a"),
+"soil": ExtResource("35_duvi7"),
+"water": ExtResource("8_fjxlr"),
+"wood": ExtResource("7_yffqd")
+}
+
+[node name="Categories" type="VBoxContainer" parent="MenuContainer/Inventory" unique_id=95673282]
+layout_mode = 0
+offset_left = 29.868446
+offset_top = 65.000015
+offset_right = 1061.4448
+offset_bottom = 786.2501
+theme_override_constants/separation = 10
+
+[node name="ItemsLabel" type="Label" parent="MenuContainer/Inventory/Categories" unique_id=1108262399]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("26_gef2w")
+theme_override_font_sizes/font_size = 70
+text = "Items"
+
+[node name="HSeparator" type="HSeparator" parent="MenuContainer/Inventory/Categories" unique_id=1036985609]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_8w6j3")
+
+[node name="Items" type="GridContainer" parent="MenuContainer/Inventory/Categories" unique_id=905589220]
+layout_mode = 2
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 4
+columns = 8
+
+[node name="ToolsLabel" type="Label" parent="MenuContainer/Inventory/Categories" unique_id=1299928381]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("26_gef2w")
+theme_override_font_sizes/font_size = 70
+text = "Tools"
+
+[node name="HSeparator2" type="HSeparator" parent="MenuContainer/Inventory/Categories" unique_id=1527145663]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_8w6j3")
+
+[node name="Tools" type="GridContainer" parent="MenuContainer/Inventory/Categories" unique_id=558407693]
+layout_mode = 2
+columns = 5
+
+[node name="Craft" type="Control" parent="MenuContainer" unique_id=2105046835]
+visible = false
+anchors_preset = 0
+offset_left = -31.578873
+offset_top = 32.500008
+offset_right = 1060.9221
+offset_bottom = 843.75
+
+[node name="ItemList" type="VBoxContainer" parent="MenuContainer/Craft" unique_id=1954882522]
+layout_mode = 0
+offset_left = 28.9473
+offset_top = 118.75002
+offset_right = 1061.8396
+offset_bottom = 785.0002
+script = ExtResource("29_sld4q")
+item_resources = Array[ExtResource("33_ggq0n")]([ExtResource("32_wogtf"), ExtResource("33_6e131"), ExtResource("43_3pmvh")])
+
+[node name="Shop" type="Control" parent="MenuContainer" unique_id=969617296]
+visible = false
+anchors_preset = 0
+offset_left = -31.578873
+offset_top = 32.500008
+offset_right = 1060.9221
+offset_bottom = 843.75
+
+[node name="ItemList" type="VBoxContainer" parent="MenuContainer/Shop" unique_id=341488250]
+layout_mode = 0
+offset_left = 28.9473
+offset_top = 118.75002
+offset_right = 1061.8396
+offset_bottom = 785.0002
+script = ExtResource("29_sld4q")
+is_shop = true
+item_resources = Array[ExtResource("33_ggq0n")]([ExtResource("40_ihao3"), ExtResource("34_6e131"), ExtResource("41_1wxx2"), ExtResource("41_twb7u")])
+
+[node name="Trade" type="Control" parent="MenuContainer" unique_id=55402450]
+visible = false
+anchors_preset = 0
+offset_left = 2.6315727
+offset_top = 153.75003
+offset_right = 1024.9977
+offset_bottom = 812.5001
+
+[node name="HFlowContainer" type="HFlowContainer" parent="MenuContainer/Trade" unique_id=1350442608]
+layout_mode = 0
+offset_right = 1019.7345
+offset_bottom = 666.2501
+theme_override_constants/h_separation = 80
+alignment = 1
+script = ExtResource("31_fymlg")
+trade_scene = ExtResource("31_suwn6")
+
+[node name="Map" type="Control" parent="MenuContainer" unique_id=1171826296]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Settings" type="Control" parent="MenuContainer" unique_id=1157038869]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CloseButton" type="Button" parent="MenuContainer" unique_id=1391972085]
+layout_mode = 0
+offset_left = 942.10297
+offset_top = 50.000015
+offset_right = 1040.8352
+offset_bottom = 142.50003
+theme_override_colors/font_color = Color(1.216, 1.216, 1.216, 1)
+theme_override_fonts/font = ExtResource("26_gef2w")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxTexture_3muty")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xlkwm")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ropus")
+
+[connection signal="pressed" from="TaskBoard" to="TaskBoard" method="_on_pressed"]
+[connection signal="mouse_entered" from="Well" to="Well" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Well" to="Well" method="_on_mouse_exited"]
+[connection signal="pressed" from="Well" to="Well" method="_on_pressed"]
+[connection signal="pressed" from="MenuContainer/CloseButton" to="MenuContainer/CloseButton" method="_on_pressed"]

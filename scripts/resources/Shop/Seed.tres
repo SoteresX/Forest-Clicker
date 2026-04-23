@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bn4vmlanh6m4v"]
+
+[ext_resource type="Texture2D" uid="uid://c8dwmdihcq0e8" path="res://assets/Items/seed.png" id="1_6f3n2"]
+[ext_resource type="Script" uid="uid://d16ej1hhh3a8r" path="res://scripts/Items/ItemData.gd" id="1_skbqh"]
+[ext_resource type="Texture2D" uid="uid://cxxgtmc4prn1l" path="res://assets/Items/money.png" id="2_6f3n2"]
+
+[resource]
+script = ExtResource("1_skbqh")
+icon = ExtResource("1_6f3n2")
+name = "x3 Seeds"
+description = "The only way to plant trees!"
+cost_type = "money"
+price = 10
+requirement_icon = ExtResource("2_6f3n2")
+reward_type = "seed"
+reward_amount = 3
+metadata/_custom_type_script = "uid://d16ej1hhh3a8r"

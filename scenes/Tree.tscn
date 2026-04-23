@@ -1,0 +1,169 @@
+[gd_scene format=3 uid="uid://dym4h43omc5u5"]
+
+[ext_resource type="Texture2D" uid="uid://dg6xl3icwyqi4" path="res://assets/Trees/dirt.png" id="1_1gtcl"]
+[ext_resource type="Script" uid="uid://qa545fic2cmv" path="res://scripts/Plots Trees Well/plot.gd" id="2_r0kve"]
+[ext_resource type="Texture2D" uid="uid://bm3823xrh1bxc" path="res://assets/Trees/tree_planted.png" id="3_2i8fu"]
+[ext_resource type="Script" uid="uid://bax0jhluuj5xs" path="res://scripts/Plots Trees Well/tree.gd" id="4_uuee5"]
+[ext_resource type="Script" uid="uid://b7jcyge2pndgw" path="res://scenes/state_bars.gd" id="5_1gtcl"]
+[ext_resource type="Texture2D" uid="uid://de4brvj1nok53" path="res://assets/Items/water_drop.png" id="6_2i8fu"]
+[ext_resource type="Texture2D" uid="uid://dcb0nlpauk1uq" path="res://assets/UI/progress_bar.png" id="6_r0kve"]
+[ext_resource type="Texture2D" uid="uid://buxvpvmexdsm" path="res://assets/Tools/wood_axe.png" id="8_uuee5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2i8fu"]
+texture = ExtResource("6_r0kve")
+texture_margin_left = 2.0
+texture_margin_top = 4.0
+texture_margin_right = 2.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="Gradient" id="Gradient_2i8fu"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uuee5"]
+gradient = SubResource("Gradient_2i8fu")
+width = 150
+height = 20
+
+[node name="Tree" type="Control" unique_id=740697860]
+z_index = 2
+layout_mode = 3
+anchors_preset = 0
+offset_left = 498.0
+offset_top = 596.0
+offset_right = 656.0
+offset_bottom = 706.0
+mouse_filter = 2
+
+[node name="Plot" type="TextureButton" parent="." unique_id=1929873667]
+layout_mode = 0
+offset_top = -52.0
+offset_right = 160.0
+offset_bottom = 108.0
+texture_normal = ExtResource("1_1gtcl")
+script = ExtResource("2_r0kve")
+
+[node name="Tree" type="TextureButton" parent="Plot" unique_id=562624599]
+layout_mode = 0
+offset_left = -5.0
+offset_top = -36.0
+offset_right = 171.0
+offset_bottom = 140.0
+mouse_filter = 1
+texture_normal = ExtResource("3_2i8fu")
+stretch_mode = 5
+script = ExtResource("4_uuee5")
+
+[node name="StateBars" type="Control" parent="." unique_id=991452083]
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 73.0
+offset_right = 164.0
+offset_bottom = 163.0
+mouse_filter = 2
+script = ExtResource("5_1gtcl")
+
+[node name="WaterBar" type="Control" parent="StateBars" unique_id=1514302449]
+custom_minimum_size = Vector2(0, 30)
+anchors_preset = 0
+offset_right = 154.0
+offset_bottom = 30.0
+mouse_filter = 2
+
+[node name="Icon" type="TextureRect" parent="StateBars/WaterBar" unique_id=2006892932]
+z_index = 1
+layout_mode = 0
+offset_left = -23.0
+offset_top = -3.0
+offset_right = 17.0
+offset_bottom = 37.0
+texture = ExtResource("6_2i8fu")
+expand_mode = 2
+
+[node name="Border" type="PanelContainer" parent="StateBars/WaterBar" unique_id=79776341]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 154.0
+offset_bottom = 32.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_2i8fu")
+
+[node name="Bar" type="TextureProgressBar" parent="StateBars/WaterBar/Border" unique_id=926519501]
+z_index = -1
+layout_mode = 2
+value = 100.0
+texture_progress = SubResource("GradientTexture2D_uuee5")
+tint_under = Color(0.951106, 0.52464145, 0.6726612, 1)
+tint_over = Color(0.5506312, 0.8582626, 0.794828, 1)
+tint_progress = Color(6.930828e-06, 0.9136461, 0.91364604, 1)
+
+[node name="CutBar" type="Control" parent="StateBars" unique_id=85830199]
+z_index = 1
+custom_minimum_size = Vector2(0, 30)
+anchors_preset = 0
+offset_right = 154.0
+offset_bottom = 30.0
+mouse_filter = 2
+
+[node name="Icon" type="TextureRect" parent="StateBars/CutBar" unique_id=695116792]
+z_index = 2
+layout_mode = 0
+offset_left = -23.0
+offset_top = -3.0
+offset_right = 17.0
+offset_bottom = 37.0
+texture = ExtResource("8_uuee5")
+expand_mode = 2
+
+[node name="Border" type="PanelContainer" parent="StateBars/CutBar" unique_id=1323030913]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 154.0
+offset_bottom = 32.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_2i8fu")
+
+[node name="Bar" type="TextureProgressBar" parent="StateBars/CutBar/Border" unique_id=116603786]
+z_index = -1
+layout_mode = 2
+value = 100.0
+texture_progress = SubResource("GradientTexture2D_uuee5")
+tint_under = Color(0.951106, 0.52464145, 0.6726612, 1)
+tint_over = Color(0.5506312, 0.8582626, 0.794828, 1)
+tint_progress = Color(0.99215686, 0.44313726, 0, 1)
+
+[node name="GrowthBar" type="Control" parent="StateBars" unique_id=1096593418]
+anchors_preset = 0
+offset_top = 37.0
+offset_right = 154.0
+offset_bottom = 68.0
+mouse_filter = 2
+
+[node name="Icon" type="TextureRect" parent="StateBars/GrowthBar" unique_id=1774377464]
+z_index = 1
+layout_mode = 0
+offset_left = -50.0
+offset_top = -28.0
+offset_right = 47.0
+offset_bottom = 64.0
+texture = ExtResource("3_2i8fu")
+expand_mode = 2
+
+[node name="Border" type="PanelContainer" parent="StateBars/GrowthBar" unique_id=1776147271]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 154.0
+offset_bottom = 32.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_2i8fu")
+
+[node name="Bar" type="TextureProgressBar" parent="StateBars/GrowthBar/Border" unique_id=672754585]
+z_index = -1
+layout_mode = 2
+value = 100.0
+texture_progress = SubResource("GradientTexture2D_uuee5")
+tint_under = Color(0.951106, 0.52464145, 0.6726612, 1)
+tint_over = Color(0.5506312, 0.8582626, 0.794828, 1)
+tint_progress = Color(0, 0.9137255, 0.05882353, 1)
+
+[connection signal="mouse_entered" from="Plot" to="Plot" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Plot" to="Plot" method="_on_mouse_exited"]
+[connection signal="pressed" from="Plot" to="Plot" method="_on_pressed"]
+[connection signal="mouse_entered" from="Plot/Tree" to="Plot/Tree" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Plot/Tree" to="Plot/Tree" method="_on_mouse_exited"]

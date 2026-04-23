@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://brkxgl00fy3iu"]
+
+[ext_resource type="Script" uid="uid://chqdy2i43hjlo" path="res://scenes/craft_item_entry.gd" id="1_d1afh"]
+[ext_resource type="Texture2D" uid="uid://dw47nw28f5wyh" path="res://assets/UI/shop_item_border.png" id="2_yk7wm"]
+[ext_resource type="Texture2D" uid="uid://buxvpvmexdsm" path="res://assets/Tools/wood_axe.png" id="3_8b2ue"]
+[ext_resource type="FontFile" uid="uid://d2t5pnlu8g8gw" path="res://assets/fonts/PixelifySans.ttf" id="4_qcrnk"]
+[ext_resource type="Texture2D" uid="uid://dksy7yola82ah" path="res://assets/Items/log.png" id="5_8d8wa"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xdog2"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+texture = ExtResource("2_yk7wm")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d1afh"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8b2ue"]
+bg_color = Color(0.48791397, 0.27974716, 4.813075e-08, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yk7wm"]
+bg_color = Color(0.32156864, 0.08235294, 0, 0.22745098)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="ItemEntry" type="HBoxContainer" unique_id=1426972342]
+custom_minimum_size = Vector2(100, 150)
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+script = ExtResource("1_d1afh")
+
+[node name="ItemBorder" type="PanelContainer" parent="." unique_id=1085345207]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_xdog2")
+
+[node name="ItemIcon" type="TextureRect" parent="ItemBorder" unique_id=1923490823]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("3_8b2ue")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Text" type="VBoxContainer" parent="." unique_id=42263231]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="ItemName" type="Label" parent="Text" unique_id=472423950]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_qcrnk")
+theme_override_font_sizes/font_size = 50
+text = "Wooden Axe"
+
+[node name="ItemDescription" type="Label" parent="Text" unique_id=158781896]
+custom_minimum_size = Vector2(521, 37)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_qcrnk")
+theme_override_font_sizes/font_size = 30
+text = "An axe to help you cut wood faster!"
+autowrap_mode = 3
+max_lines_visible = 2
+
+[node name="BuyReq" type="VBoxContainer" parent="." unique_id=1993150725]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+alignment = 2
+
+[node name="Item_Requirement" type="HBoxContainer" parent="BuyReq" unique_id=743672823]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+alignment = 1
+
+[node name="ItemNeeded" type="TextureRect" parent="BuyReq/Item_Requirement" unique_id=477363448]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = ExtResource("5_8d8wa")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="AmountNeeded" type="Label" parent="BuyReq/Item_Requirement" unique_id=541717668]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_qcrnk")
+theme_override_font_sizes/font_size = 40
+text = "30"
+
+[node name="Craft" type="Button" parent="BuyReq" unique_id=1579143602]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+size_flags_stretch_ratio = 3.74
+theme_override_fonts/font = ExtResource("4_qcrnk")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_d1afh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8b2ue")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yk7wm")
+text = "Craft"
+
+[connection signal="pressed" from="BuyReq/Craft" to="." method="_on_craft_pressed"]

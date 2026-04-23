@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://fraisoacs363"]
+
+[ext_resource type="Texture2D" uid="uid://b7d8jxppaoi3s" path="res://assets/Items/plot.png" id="1_cxwjy"]
+[ext_resource type="Script" uid="uid://d16ej1hhh3a8r" path="res://scripts/ItemData.gd" id="1_wl8pe"]
+[ext_resource type="Texture2D" uid="uid://cxxgtmc4prn1l" path="res://assets/Items/money.png" id="2_p4ay7"]
+
+[resource]
+script = ExtResource("1_wl8pe")
+icon = ExtResource("1_cxwjy")
+name = "Extra Plot"
+description = "An extra plot to plant another tree!"
+cost_type = "money"
+price = 200
+requirement_icon = ExtResource("2_p4ay7")
+reward_type = "plot"
+max_level = 3
+metadata/_custom_type_script = "uid://d16ej1hhh3a8r"

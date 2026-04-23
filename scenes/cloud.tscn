@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dghxs8lav88ff"]
+
+[ext_resource type="Texture2D" uid="uid://dl13bx4aouveq" path="res://assets/environment/Clouds_01.png" id="1_fubt3"]
+[ext_resource type="Script" uid="uid://dimvrv4qncwrg" path="res://scripts/cloud.gd" id="2_sk0fm"]
+[ext_resource type="Texture2D" uid="uid://icey3dwg5qf0" path="res://assets/environment/Clouds_02.png" id="3_6omnh"]
+[ext_resource type="Texture2D" uid="uid://brbrd3g7qcfbh" path="res://assets/environment/Clouds_05.png" id="4_ky362"]
+
+[node name="Cloud" type="TextureRect" unique_id=1696608370]
+offset_left = 940.0
+offset_top = 9.0
+offset_right = 1516.0
+offset_bottom = 265.0
+texture = ExtResource("1_fubt3")
+script = ExtResource("2_sk0fm")
+cloud_textures = Array[Texture2D]([ExtResource("1_fubt3"), ExtResource("3_6omnh"), ExtResource("4_ky362")])

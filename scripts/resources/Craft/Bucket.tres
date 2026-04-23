@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://deiqxrqefoi8r"]
+
+[ext_resource type="Texture2D" uid="uid://35vb45dwdh2e" path="res://assets/Tools/bucket.png" id="1_lhre6"]
+[ext_resource type="Script" uid="uid://d16ej1hhh3a8r" path="res://scripts/ItemData.gd" id="1_orpah"]
+[ext_resource type="Texture2D" uid="uid://dksy7yola82ah" path="res://assets/Items/log.png" id="2_nbdas"]
+
+[resource]
+script = ExtResource("1_orpah")
+icon = ExtResource("1_lhre6")
+name = "Bucket Capacity"
+description = "Expand your bucket's water capacity!"
+cost_type = "wood"
+price = 50
+requirement_icon = ExtResource("2_nbdas")
+reward_type = "bucket"
+metadata/_custom_type_script = "uid://d16ej1hhh3a8r"

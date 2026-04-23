@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://dq8ttwf51n1bb"]
+
+[ext_resource type="Texture2D" uid="uid://csqk7rt0grg5r" path="res://assets/UI/tile_0001.png" id="1_2yurd"]
+[ext_resource type="Texture2D" uid="uid://de4brvj1nok53" path="res://assets/Items/water_drop.png" id="2_8hi28"]
+[ext_resource type="Script" uid="uid://c74w028q1wc3t" path="res://scenes/inventory_slot.gd" id="2_oqmsj"]
+[ext_resource type="FontFile" uid="uid://d2t5pnlu8g8gw" path="res://assets/fonts/PixelifySans.ttf" id="3_oqmsj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xkj5a"]
+texture = ExtResource("1_2yurd")
+
+[node name="Slot" type="PanelContainer" unique_id=1525307613]
+custom_minimum_size = Vector2(130, 130)
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_xkj5a")
+script = ExtResource("2_oqmsj")
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=1585186063]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Content" type="Control" parent="Margin" unique_id=1203799669]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Icon" type="TextureRect" parent="Margin/Content" unique_id=2021450447]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_left = 8.420956
+offset_top = 2.5
+offset_right = 103.15753
+offset_bottom = 97.23657
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("2_8hi28")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="Amount" type="Label" parent="Margin/Content" unique_id=1674536810]
+z_index = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 83.0
+offset_top = -50.0
+offset_right = 112.0
+offset_bottom = 10.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_type_variation = &"HeaderLarge"
+theme_override_fonts/font = ExtResource("3_oqmsj")
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://drbcx0q7ixvt7"]
+
+[ext_resource type="Texture2D" uid="uid://buxvpvmexdsm" path="res://assets/Tools/wood_axe.png" id="1_5f7ah"]
+[ext_resource type="Script" uid="uid://d16ej1hhh3a8r" path="res://scripts/ItemData.gd" id="1_nu5gm"]
+[ext_resource type="Texture2D" uid="uid://dksy7yola82ah" path="res://assets/Items/log.png" id="2_cu6ft"]
+
+[resource]
+script = ExtResource("1_nu5gm")
+icon = ExtResource("1_5f7ah")
+name = "Wooden Axe"
+description = "An wooden axe to help you cut wood faster!"
+cost_type = "wood"
+requirement_icon = ExtResource("2_cu6ft")
+reward_type = "axe"
+metadata/_custom_type_script = "uid://d16ej1hhh3a8r"
